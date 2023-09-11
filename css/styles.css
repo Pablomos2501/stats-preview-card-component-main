@@ -1,0 +1,168 @@
+:root {
+    --azulOscuro: hsl(233, 47%, 7%);
+    --azulDesaturado: hsl(244, 38%, 16%);
+    --violetaSuave: hsl(277, 64%, 61%);
+
+    --blanco: hsl(0, 0%, 100%);
+    --blancoTransparente: hsla(0, 0%, 100%, 0.75);
+    --blancoTransparente2: hsla(0, 0%, 100%, 0.6);
+
+    --fuente1: 'Inter', sans-serif;
+    --fuente2: 'Lexend Deca', sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /* 1 rem = 10px */
+}
+
+
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: var(--azulOscuro);
+    padding-top: 9rem;
+}
+
+@media (min-width: 768px) {
+    body {
+        /* padding: 9rem; */
+    }
+}
+
+h1 {
+    font-family: var(--fuente1);
+    color: var(--blanco);
+}
+
+p {
+    font-family: var(--fuente2);
+}
+
+a{
+    text-decoration: none;
+    color: var(--violetaSuave);
+}
+
+span {
+    color: var(--violetaSuave);
+    margin-top: .5rem;
+
+}
+
+.contendorPrincipal {
+
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 2rem;
+    background-color: var(--azulDesaturado);
+    border-radius: .5rem;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 30rem;
+    text-align: center;
+
+
+}
+
+.contenedorIzquierdo {
+
+    margin: 0 auto;
+    width: 20rem;
+}
+
+@media (min-width: 768px) {
+
+
+    .contendorPrincipal {
+        flex-direction: row;
+        gap: 5rem;
+        width: 70rem;
+        text-align: left;
+    }
+
+    .contenedorIzquierdo {
+
+        margin-left: 5rem;
+        
+        width: 30rem;
+
+    }
+
+
+}
+
+.contenedorIzquierdo__Titulo {}
+
+.contenedorIzquierdo__texto1 {
+    color: var(--blancoTransparente2);
+}
+
+.contenedorIzquierdo__texto2 {
+    display: flex;
+    color: var(--blanco);
+    font-weight: 700;
+    font-size: 1.8rem;
+    flex-direction: column;
+}
+
+
+
+.span {
+    display: block;
+    color: var(--blancoTransparente2);
+    text-transform: uppercase;
+    font-size: .8rem;
+    font-size: 1.1rem;
+}
+
+@media (min-width: 768px) {
+    .contenedorIzquierdo__texto2 {
+        flex-direction: row;
+        gap: 5rem;
+        font-size: 1.5rem;
+    }
+
+    .span {
+        font-size: .9rem;
+    }
+}
+
+
+
+img {
+
+    width: 30rem;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+}
+
+@media (min-width: 768px) {
+    img {
+      
+        width: 35rem;
+       
+        border-radius: .5rem;
+    }
+}
+
+/* @supports(object-fit: cover) {
+    .contenedorDerecho img {
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+} */
+
+.attribution{
+    text-align: center;
+    margin-top: 1rem;
+    color: var(--blanco);
+}
